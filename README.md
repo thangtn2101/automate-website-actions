@@ -1,5 +1,5 @@
-# Welcome to Selenium Repository
-## This repo store a project using Selenium framework and junit test to automate the login process and search engine. You will find in this Repository the following stuff
+# Welcome to Automate Website Actions Repository
+## This repo store a project using Selenium framework and junit test to automate the login process and search engine.Also it can craw information from website for example here is mobile world website You will find in this Repository the following stuff
 
 * CI (continous Integration) configuration
 * Source code to demo selenium/ Junit technique
