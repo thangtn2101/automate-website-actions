@@ -31,15 +31,20 @@ public class Guru99Test {
     
     @Test 
     public void testLogin() throws InterruptedException{
+        String username = "mngr392601";
+        String pass = "Ebegaty";
+        // sau nay se tham so hoa 2 chuoi string nay 
+        
         WebElement userIdBox = myBrowser.findElement(By.xpath("//input[@name='uid']"));
-        userIdBox.sendKeys("mngr392601");
+        userIdBox.sendKeys(username);
         WebElement password = myBrowser.findElement(By.cssSelector("input[name='password']"));
-        password.sendKeys("Ebegaty");
+        password.sendKeys(pass);
         WebElement btnLogin = myBrowser.findElement(By.xpath("//input[@name='btnLogin']"));
         btnLogin.click();
         Thread.sleep(3000);
-        WebElement helloMsg = myBrowser.findElement(By.xpath("//td[normalize-space()='Manger Id : mngr392601']"));
-        assertEquals("Manger Id : mngr392601", helloMsg.getText());
+        WebElement helloMsg = myBrowser.findElement(By.xpath("//tr[@class='heading3']//td"));
+        
+        assertEquals("Manger Id : " + username, helloMsg.getText());
     }
     
     @AfterAll
